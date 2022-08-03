@@ -2,9 +2,16 @@ body {
     background-color: #F2E9EB;
 }
 
-.comment-box {}
+.comment-box {
+    text-align: center;
+}
 
-.title {}
+.title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #F23064;
+}
 
 .area {
     width: 400px;
