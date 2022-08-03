@@ -14,8 +14,7 @@ const submit = document.getElementById('submit-btn').addEventListener('click', f
     const commentWriter = document.createElement('p');
     commentWriter.innerText = userName;
 
-    commentShow.appendChild(commentSet)
-
-    commentShow.appendChild(commentWriter)
-
+    commentShow.appendChild(commentSet);
+    commentShow.appendChild(commentWriter);
 });
+
