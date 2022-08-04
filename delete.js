@@ -22,7 +22,7 @@ document.getElementById('confirm').addEventListener('keyup', function (event) {
     }
 });
 
-// event bubble and delegation part 
+// event bubble part 
 document.getElementById('first').addEventListener('click', function (event) {
     event.stopPropagation();
     // event.stopImmediatePropagation();
@@ -43,4 +43,30 @@ document.getElementById('section').addEventListener('click', function () {
     console.log('section clicked')
 })
 
+// delegation part 
+/* const items = document.getElementsByClassName('item');
+for (const item of items) {
+
+    //   item.addEventListener('click', function () {
+    //       document.getElementById('container-dele').removeChild(item);
+    //   })
+
+    item.addEventListener('click', function (event) {
+        event.target.parentNode.removeChild(event.target);
+    })
+}; */
+
+document.getElementById('add').addEventListener('click', function () {
+    const text = document.getElementById('text');
+    const li = document.createElement('li');
+    li.innerText = text.value;
+    li.classList.add('item')
+    text.value = '';
+    const parent = document.getElementById('container-dele')
+    parent.appendChild(li);
+});
+
+document.getElementById('container-dele').addEventListener('click', function (event) {
+    event.target.parentNode.removeChild(event.target);
+})
 
